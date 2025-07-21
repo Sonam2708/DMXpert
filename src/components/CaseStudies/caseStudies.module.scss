@@ -1,0 +1,154 @@
+.caseStudiesSection {
+  background: linear-gradient(120deg, #e3f0ff 0%, #f5faff 100%);
+  padding: 4rem 1rem 4.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.headline {
+  color: #003366;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.headline::after {
+  content: '';
+  display: block;
+  margin: 0.7rem auto 0 auto;
+  width: 70px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  opacity: 0.7;
+}
+
+.studiesWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2.2rem;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #e3f0ff;
+}
+.studiesWrapper::-webkit-scrollbar {
+  height: 8px;
+  background: #e3f0ff;
+}
+.studiesWrapper::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+.studyCard {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,123,255,0.10);
+  min-width: 320px;
+  max-width: 340px;
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.2rem 1.7rem 1.2rem;
+  transition: transform 0.22s, box-shadow 0.22s;
+  border: 2px solid rgba(0,123,255,0.08);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.graphBlock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+.graphImg {
+  width: 90%;
+  max-width: 220px;
+  border-radius: 12px;
+  background: #e3f0ff;
+  box-shadow: 0 2px 12px #b3e0ff44;
+  border: 2px solid #007bff22;
+}
+
+.infoBlock {
+  width: 100%;
+  text-align: center;
+}
+.clientName {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+.statsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.before, .after {
+  font-size: 1.02rem;
+  color: #007bff;
+  font-weight: 600;
+}
+.arrow {
+  color: #003366;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.quote {
+  color: #444;
+  font-size: 1.05rem;
+  font-style: italic;
+  background: #e3f0ff;
+  border-left: 4px solid #007bff;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+@media (max-width: 900px) {
+  .studiesWrapper {
+    gap: 1.2rem;
+    max-width: 100%;
+  }
+  .studyCard {
+    min-width: 260px;
+    max-width: 280px;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .caseStudiesSection {
+    padding: 2.2rem 0.5rem 2.5rem 0.5rem;
+  }
+  .headline {
+    font-size: 1.2rem;
+  }
+  .studiesWrapper {
+    gap: 0.7rem;
+    padding-bottom: 0.2rem;
+  }
+  .studyCard {
+    min-width: 180px;
+    max-width: 220px;
+    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+  }
+  .graphImg {
+    max-width: 120px;
+  }
+}

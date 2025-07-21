@@ -1,0 +1,124 @@
+.servicesSection {
+  background: #f5faff;
+  padding: 4rem 0.5rem 5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.overline {
+  color: #007bff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.title {
+  color: #003366;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #444;
+  font-size: 1.15rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 4px 24px rgba(0,123,255,0.08);
+  padding: 2.2rem 1.7rem 2rem 1.7rem;
+  flex: 1 1 220px;
+  max-width: 350px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.28s cubic-bezier(.4,2,.6,1), box-shadow 0.28s, background 0.2s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(0,123,255,0.18);
+  background: linear-gradient(120deg, #e3f0ff 0%, #f5faff 100%);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 1.2rem;
+  transition: color 0.25s, transform 0.25s;
+}
+.card:hover .icon {
+  color: #0056b3;
+  transform: scale(1.18) rotate(-8deg);
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 0.7rem;
+}
+
+.cardDesc {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .cardsWrapper {
+    gap: 1.2rem;
+    max-width: 100%;
+  }
+  .card {
+    max-width: 48%;
+    min-width: 180px;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardsWrapper {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .card {
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+  .title {
+    font-size: 1.4rem;
+  }
+}
+
+
